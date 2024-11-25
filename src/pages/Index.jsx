@@ -9,11 +9,16 @@ const Index = () => {
           <div className="w-full md:w-2/5 bg-gray-700 text-white p-6 space-y-6">
             <div className="text-center">
               <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white">
-                <img
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=300&h=300"
-                  alt="الصورة الشخصية"
-                  className="w-full h-full object-cover animate-image-float"
-                />
+                <video 
+                  className="w-full h-full object-cover"
+                  controls
+                  autoPlay
+                  muted={false}
+                  loop
+                >
+                  <source src="/WhatsApp Video 2024-11-25 at 6.04.14 PM.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <h1 className="text-2xl font-bold mb-2">عمر محمد عابدين</h1>
               <p className="text-gray-300">Full Stack Developer</p>
