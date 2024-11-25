@@ -12,11 +12,12 @@ const Index = () => {
                 <video 
                   className="w-full h-full object-cover"
                   controls
-                  autoPlay
+                  autoPlay={false}
                   playsInline
-                  muted
+                  muted={false}
                   onLoadedMetadata={(e) => {
-                    e.target.play().catch(err => console.log(err));
+                    e.target.volume = 1;
+                    e.target.muted = false;
                   }}
                 >
                   <source src="/WhatsApp Video 2024-11-25 at 6.04.14 PM.mp4" type="video/mp4" />
