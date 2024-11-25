@@ -13,11 +13,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                   controls
                   autoPlay
-                  muted={false}
-                  loop
+                  playsInline
+                  muted
+                  onLoadedMetadata={(e) => {
+                    e.target.play().catch(err => console.log(err));
+                  }}
                 >
                   <source src="/WhatsApp Video 2024-11-25 at 6.04.14 PM.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
+                  متصفحك لا يدعم تشغيل الفيديو
                 </video>
               </div>
               <h1 className="text-2xl font-bold mb-2">عمر محمد عابدين</h1>
